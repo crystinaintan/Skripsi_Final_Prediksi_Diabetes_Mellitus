@@ -1,0 +1,13 @@
+mwc-formfield {
+    display: block;
+}
+
+.child {
+    margin-left: 20px;
+}
+
+#pengumuman{
+    color: red;
+    text-align: center;
+    font-size: 25px;
+}

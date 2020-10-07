@@ -1,0 +1,46 @@
+.result{
+    position: relative;
+    margin: 3% 0% 0% 0%;
+    padding : 2% 2% 2% 2%;
+    color: black;
+    border-color: black;
+    border-style: double;
+    width: 35%;
+    float: left;
+    display: none;
+}
+
+.button_ulang{
+    background-color: #e7e7e7;
+    border: none;
+    color: black;
+    padding: 2% 2% 2% 5%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0% 2% 0% 7%; 
+    transition-duration: 0.4s;
+    border-radius: 100% 25% 25% 100%;
+    border: 2px solid #555555;
+    cursor: pointer;
+    float: right;
+}
+
+.button_ulang:hover {
+    background-color: rgb(156, 169, 182);
+    color: white;
+    cursor: pointer;
+}
+  
+.hasil_prediksi{
+    border-style: ridge;
+    padding: 2% 0% 2% 2%;
+}
+
+
+#warning{
+    color: red;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}

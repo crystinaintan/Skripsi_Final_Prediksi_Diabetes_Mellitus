@@ -1,0 +1,54 @@
+.definisi{
+    text-indent: 10%;
+    height: auto;
+    width: auto;
+    position: relative;
+    padding : 3% 5% 0% 2%;
+    text-align: justify;
+    margin : 0% 0% 15% 0%;
+}
+
+h2{
+    position: relative;
+    padding: 2% 0% 0% 2%;
+}/* umum */
+
+.gambar{
+    width: 30%;
+    height: 90%;
+    padding: 0% 2% 0% 3%;
+    margin : 0;
+    position: relative;
+    float: left;
+}/*umum*/
+
+p{
+    padding-left: 3%;
+}/*umum*/
+
+ol{
+    padding-left: 7%;
+}
+
+li{
+    padding:0;
+    margin: 0;
+    text-align: justify;
+    display: list-item;
+    text-indent: 2%;
+}
+
+.itemList{
+    text-indent: 0%;
+}
+/* p{
+    width: 100%;
+    height: 100%;
+} */
+/* 
+.paragraf{
+    position: relative;
+    float: left;
+    width: 55%;
+    padding-left:2%;
+} */
