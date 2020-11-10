@@ -8,10 +8,12 @@ import obesitas from '../../Photo/BMI.jpg';
 
 class BmiObesitas extends React.Component{
     componentDidMount(){
+        console.log("Component BmiObesitas componentDidMount");
         window.scrollTo(0, 0);
     }
 
     render(){
+        console.log("Component BmiObesitas render");
         return (
             <div className="main_page">
                 <img className="wallpaper" src={diabetes} alt=""/>

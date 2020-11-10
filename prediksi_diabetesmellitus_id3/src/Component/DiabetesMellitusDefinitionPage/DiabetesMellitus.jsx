@@ -8,10 +8,12 @@ import '@material/mwc-formfield';
 
 class DiabetesMellitus extends React.Component{
     componentDidMount(){
+        console.log("Component DiabetesMellitus componentDidMount");
         window.scrollTo(0, 0);
     }
 
     render(){
+        console.log("Component DiabetesMellitus render");
         return (
             <div className="main_page">
                 <img className="wallpaper" src={diabetes} alt=""/>

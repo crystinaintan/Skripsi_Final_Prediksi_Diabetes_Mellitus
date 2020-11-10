@@ -33,8 +33,9 @@ class MenuBar extends React.Component {
     }
 
     render() {
+        console.log("Component MenuBar Render");
         return (
-            console.log("menubar render"),
+            //console.log("Component Main Render PAGE"),
             <div className="menu">
                 <Drawer className="drawer">
                     <DrawerContent className= "drawercontent">

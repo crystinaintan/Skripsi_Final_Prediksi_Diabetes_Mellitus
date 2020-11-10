@@ -21,9 +21,9 @@ class Result extends React.Component{
     }
 
     render(){
-        console.log("Render Result");
-        console.log("Isi hasil imt : ", this.state.hasilImt);
-        console.log("Ini value atribut given from middle : ", this.props.data.hasilCekFormDiabetes);
+        console.log("Component Result Render");
+        //console.log("Isi hasil imt : ", this.state.hasilImt);
+        //console.log("Ini value atribut given from middle : ", this.props.data.hasilCekFormDiabetes);
         return(
             <div className="result" id="hasil">
                     <h2>Hasil Deteksi</h2>

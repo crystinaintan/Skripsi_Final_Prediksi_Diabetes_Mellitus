@@ -38,7 +38,7 @@ class Middle extends React.Component{
     }
 
     render(){
-        console.log("Render MiddleComponent");
+        console.log("Component Middle Render");
         return(
             <div className="main_page">
                 <img className="wallpaper" src={diabetes} alt=""/>

@@ -26,9 +26,11 @@ class Home extends React.Component{
         localStorage.removeItem("statusInput");
 
         localStorage.setItem("menubaritem", 0);
+        console.log("Component HomePage ComponenWillMount");
     }
 
     render(){
+        console.log("Component HomePage Render");
         return(
             <div className="page">
                 <img className="wallpaper_page" src={diabetes} alt=""/>

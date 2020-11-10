@@ -31,7 +31,7 @@ class FormTest extends React.Component{
             resultExist : false,
             statusInput : true
         }
-
+        console.log("Component FormTest Constructor");
     }
 
     handleLahirChange = event => {
@@ -616,6 +616,7 @@ class FormTest extends React.Component{
         Mengirim hasil ke ResultComponent (Diletakkan disini agar render dulu baru setState sehingga ga terjadi infinite loop)
     **/
     async callapi(){    //Knp async??
+        console.log("Component FormTest callapi");
         var data= 
             { 
                 "lahir": this.state.tahun,
@@ -632,7 +633,7 @@ class FormTest extends React.Component{
                 "userBD" : this.state.lahir
             };
         const url = "/api/prediksi_diabetes";
-        console.log(data);
+        //console.log(data);
         
         const requestOptions = {
             method: 'POST',
@@ -690,12 +691,15 @@ class FormTest extends React.Component{
         this.props.doTest.changeResultTestImt(resImt);
         this.props.doTest.changeResultTestObesitas(resOb);
         this.props.doTest.changeResultTestTekananDarah(resTD);
+
+        console.log("Component FormTest callBackDataUser");
     }
 
     /*
         Method untuk set local storage untuk data input user
     **/
    setLocalStorageForDataUser = (nextProps, nextState) =>{  
+        console.log("Component FormTest setLocalStorageForDataUser");
         localStorage.setItem('dulahir', JSON.stringify(nextState.lahir));
         localStorage.setItem('duhamil', JSON.stringify(nextState.hamil));
         localStorage.setItem('duglukosa', JSON.stringify(nextState.glukosa));
@@ -716,6 +720,7 @@ class FormTest extends React.Component{
    }
 
     alertReInputDataUser = () => {
+        console.log("Component FormTest alertReInputDataUser");
         var r = window.confirm("Ingin Mengulangi Tes?");
         if (r == true) {
             document.getElementById("hasil").style.display = "none";
@@ -733,7 +738,8 @@ class FormTest extends React.Component{
     }
 
     callAlert = () =>{
-        console.log("Result Exist di Form Test : ", this.state.resultExist);
+        //console.log("Result Exist di Form Test : ", this.state.resultExist);
+        console.log("Component FormTest callAlert");
         if(this.state.resultExist)
         {
             this.alertReInputDataUser();
@@ -746,12 +752,12 @@ class FormTest extends React.Component{
         {
             this.callBackDataUser()
         }
-        console.log("Component FORM WILL AMOUNT");
+        console.log("Component FormTest componentWillMount");
     }
 
     componentDidMount = () => {
         
-        console.log("Component FORM DID Mount");
+        console.log("Component FormTest componentDidMount");
         //Ini Untuk Bisa tetap munculin hasil kalau statusnya resultExist
         if(this.state.resultExist == true)
         {
@@ -764,7 +770,7 @@ class FormTest extends React.Component{
 
     componentWillUpdate = (nextProps, nextState) => {
         this.setLocalStorageForDataUser(nextProps,nextState);
-        console.log("Component FORM WILL Update");
+        console.log("Component FormTest componentWillUpdate");
     }
 
     /**
@@ -772,6 +778,7 @@ class FormTest extends React.Component{
      */
     handleSubmit = event =>{
         event.preventDefault(); //ini harus ada, agar kalau ada error marknya ga ilang (seolah2 ga disubmit klo error)
+        console.log("Component FormTest handleSubmit");
     }
 
     isNumeric = (n) => {
@@ -783,6 +790,7 @@ class FormTest extends React.Component{
     }
 
     go_predict_klik = ()=> {
+        console.log("Component FormTest onClick go_predict_klik");
         var x = document.getElementById("hasil");
         var y = document.getElementById("prediksi");
         var status = this.getAgeFromLahir();
@@ -807,6 +815,7 @@ class FormTest extends React.Component{
     }
 
     go_predict_hover = ()=> {
+        console.log("Component FormTest onMouseHover go_predict_hover");
         var y = document.getElementById("prediksi");
         var status = this.getAgeFromLahir();
 
@@ -902,7 +911,7 @@ class FormTest extends React.Component{
     }
 
     render(){
-        console.log("Render Form");
+        console.log("Component FormTest Render");
         return(
             <form onSubmit={this.handleSubmit}>
                     <div className="content">
