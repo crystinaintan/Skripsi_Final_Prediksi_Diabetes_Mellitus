@@ -10,7 +10,7 @@ class Diabetes extends React.Component{
     }
     
     render(){
-        console.log("Component Diabetes componentDidMount");
+        console.log("Component Diabetes render");
         return (
             <div className="main_page">
                 <img className="wallpaper" src={diabetes} alt=""/>
