@@ -15,6 +15,7 @@ class Middle extends React.Component{
             hasilCekFormObesitas:'Loading...',
             hasilCekFormTekananDarah:'Loading...'
         }
+        console.log("Component Middle constructor");
     }
 
     changeResultTestDiabetes(diabetes)

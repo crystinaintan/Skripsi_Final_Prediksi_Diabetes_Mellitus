@@ -17,7 +17,7 @@ class Result extends React.Component{
 
             //penampung_hasilDiabetes :''
         }
-        
+        console.log("Component Result constructor");
     }
 
     render(){

@@ -16,6 +16,7 @@ class MenuBar extends React.Component {
             //,
             //hoverItem: ''
         }
+        console.log("Component MenuBar constructor");
     }
 
     setLocalStorageForMenuBar = (nextProps,nextState) =>{
