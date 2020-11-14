@@ -20,6 +20,7 @@ class MenuBar extends React.Component {
 
     setLocalStorageForMenuBar = (nextProps,nextState) =>{
         localStorage.setItem('menubaritem', JSON.stringify(nextState.selectedIndex));
+        console.log("Component Menubar setLocalStorageForMenuBar");
     }
 
     componentWillUpdate = (nextProps, nextState) => {
@@ -30,6 +31,7 @@ class MenuBar extends React.Component {
 
     componentWillMount = () =>{
         this.setState({ selectedIndex: JSON.parse(localStorage.getItem('menubaritem'))});
+        console.log("Component Menubar WILL Mount");
     }
 
     render() {
