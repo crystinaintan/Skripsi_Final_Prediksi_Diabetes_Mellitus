@@ -31,7 +31,7 @@ class FormTest extends React.Component{
             resultExist : false,
             statusInput : true
         }
-        console.log("Component FormTest Constructor");
+        // console.log("Component FormTest Constructor");
     }
 
     handleLahirChange = event => {
@@ -56,22 +56,22 @@ class FormTest extends React.Component{
         document.getElementById("quantity_pregnancy").style.borderColor = "";
         
         var status = this.isNumeric(afterTrim);
-        console.log("TEST ISNUMERIC : ", status);
+        // console.log("TEST ISNUMERIC : ", status);
         
         var length_input = (afterTrim+"").length;
-        console.log(length_input);
-        console.log("INI STATUS STATUS INPUT SEBELUM PANGGIL onlyNumberTest : ",this.state.statusInput);
+        // console.log(length_input);
+        // console.log("INI STATUS STATUS INPUT SEBELUM PANGGIL onlyNumberTest : ",this.state.statusInput);
         this.setState({
             statusInput :  status
         });
-        console.log("INI STATUS STATUS INPUT SETELAH PANGGIL onlyNumberTest : ",this.state.statusInput);
+        // console.log("INI STATUS STATUS INPUT SETELAH PANGGIL onlyNumberTest : ",this.state.statusInput);
 
         var l = localStorage.getItem('statusInput');
-        console.log("Ini Value dari Local Storage : ", l);
+        // console.log("Ini Value dari Local Storage : ", l);
             if(status && !this.state.resultExist){
                 
-                console.log("STATE INPUT TRUE");
-                console.log((afterTrim+"").charAt(length_input-1) == '.');
+                // console.log("STATE INPUT TRUE");
+                // console.log((afterTrim+"").charAt(length_input-1) == '.');
                 var posisi_koma_akhir = (afterTrim+"").charAt(length_input-1);
                 var posisi_koma = afterTrim.indexOf('.');
                 if(posisi_koma_akhir === '.' || posisi_koma>=0 || afterTrim < 0 || afterTrim == '-'+((afterTrim+"").substring(1,length_input)))
@@ -89,7 +89,7 @@ class FormTest extends React.Component{
                 }
             }
             else if(!status){
-                console.log("STATE INPUT FALSE");
+                // console.log("STATE INPUT FALSE");
                 if(length_input>0)
                 {
                     this.setState({
@@ -116,19 +116,19 @@ class FormTest extends React.Component{
         document.getElementById("quantity_glucose").style.borderColor = "";
         
         var val = document.getElementById("quantity_glucose").value;
-        console.log("Value dari Input : ", val);
+        // console.log("Value dari Input : ", val);
         var status = this.isNumeric(val) && status2;
-        console.log("TEST ISNUMERIC : ", status);
-        console.log("INI STATUS STATUS INPUT SEBELUM PANGGIL onlyNumberTest : ",this.state.statusInput);
+        // console.log("TEST ISNUMERIC : ", status);
+        // console.log("INI STATUS STATUS INPUT SEBELUM PANGGIL onlyNumberTest : ",this.state.statusInput);
         this.setState({
             statusInput :  status
         });
-        console.log("INI STATUS STATUS INPUT SETELAH PANGGIL onlyNumberTest : ",this.state.statusInput);
+        // console.log("INI STATUS STATUS INPUT SETELAH PANGGIL onlyNumberTest : ",this.state.statusInput);
 
         var l = localStorage.getItem('statusInput');
-        console.log("Ini Value dari Local Storage : ", l);
+        // console.log("Ini Value dari Local Storage : ", l);
             if(status && !this.state.resultExist){
-                console.log("STATE INPUT TRUE");
+                // console.log("STATE INPUT TRUE");
                 document.getElementById("quantity_glucose").style.borderColor = "";
                 if(afterTrim < 0 ||afterTrim == '-'+((afterTrim+"").substring(1,length_input)))
                 {
@@ -143,9 +143,9 @@ class FormTest extends React.Component{
                 }  
             }
             else if(!status){
-                console.log("STATE INPUT FALSE");
+                // console.log("STATE INPUT FALSE");
                 var length_input = (val+"").length;
-                console.log(length_input);
+                // console.log(length_input);
                 if(length_input>0)
                 {
                     this.setState({
@@ -172,19 +172,19 @@ class FormTest extends React.Component{
         document.getElementById("quantity_sistol").style.borderColor = "";
         
         var val = document.getElementById("quantity_sistol").value;
-        console.log("Value dari Input : ", val);
+        // console.log("Value dari Input : ", val);
         var status = this.isNumeric(val)&& status2;
-        console.log("TEST ISNUMERIC : ", status);
-        console.log("INI STATUS STATUS INPUT SEBELUM PANGGIL onlyNumberTest : ",this.state.statusInput);
+        // console.log("TEST ISNUMERIC : ", status);
+        // console.log("INI STATUS STATUS INPUT SEBELUM PANGGIL onlyNumberTest : ",this.state.statusInput);
         this.setState({
             statusInput :  status
         });
-        console.log("INI STATUS STATUS INPUT SETELAH PANGGIL onlyNumberTest : ",this.state.statusInput);
+        // console.log("INI STATUS STATUS INPUT SETELAH PANGGIL onlyNumberTest : ",this.state.statusInput);
 
         var l = localStorage.getItem('statusInput');
-        console.log("Ini Value dari Local Storage : ", l);
+        // console.log("Ini Value dari Local Storage : ", l);
             if(status && !this.state.resultExist){
-                console.log("STATE INPUT TRUE");
+                // console.log("STATE INPUT TRUE");
                 document.getElementById("quantity_sistol").style.borderColor = "";
                 if(afterTrim < 0 ||afterTrim == '-'+((afterTrim+"").substring(1,length_input)))
                 {
@@ -199,9 +199,9 @@ class FormTest extends React.Component{
                 }
             }
             else if(!status){
-                console.log("STATE INPUT FALSE");
+                // console.log("STATE INPUT FALSE");
                 var length_input = (val+"").length;
-                console.log(length_input);
+                // console.log(length_input);
                 if(length_input>0)
                 {
                     this.setState({
@@ -228,19 +228,19 @@ class FormTest extends React.Component{
         document.getElementById("quantity_diastol").style.borderColor = "";
         
         var val = document.getElementById("quantity_diastol").value;
-        console.log("Value dari Input : ", val);
+        // console.log("Value dari Input : ", val);
         var status = this.isNumeric(val) && status2;
-        console.log("TEST ISNUMERIC : ", status);
-        console.log("INI STATUS STATUS INPUT SEBELUM PANGGIL onlyNumberTest : ",this.state.statusInput);
+        // console.log("TEST ISNUMERIC : ", status);
+        // console.log("INI STATUS STATUS INPUT SEBELUM PANGGIL onlyNumberTest : ",this.state.statusInput);
         this.setState({
             statusInput :  status
         });
-        console.log("INI STATUS STATUS INPUT SETELAH PANGGIL onlyNumberTest : ",this.state.statusInput);
+        // console.log("INI STATUS STATUS INPUT SETELAH PANGGIL onlyNumberTest : ",this.state.statusInput);
 
         var l = localStorage.getItem('statusInput');
-        console.log("Ini Value dari Local Storage : ", l);
+        // console.log("Ini Value dari Local Storage : ", l);
             if(status && !this.state.resultExist){
-                console.log("STATE INPUT TRUE");
+                // console.log("STATE INPUT TRUE");
                 document.getElementById("quantity_diastol").style.borderColor = "";
                 if(afterTrim < 0 ||afterTrim == '-'+((afterTrim+"").substring(1,length_input)))
                 {
@@ -255,9 +255,9 @@ class FormTest extends React.Component{
                 } 
             }
             else if(!status){
-                console.log("STATE INPUT FALSE");
+                // console.log("STATE INPUT FALSE");
                 var length_input = (val+"").length;
-                console.log(length_input);
+                // console.log(length_input);
                 if(length_input>0)
                 {
                     this.setState({
@@ -284,19 +284,19 @@ class FormTest extends React.Component{
         document.getElementById("quantity_skin_thickness").style.borderColor = "";
 
         var val = document.getElementById("quantity_skin_thickness").value;
-        console.log("Value dari Input : ", val);
+        // console.log("Value dari Input : ", val);
         var status = this.isNumeric(val) && status2;
-        console.log("TEST ISNUMERIC : ", status);
-        console.log("INI STATUS STATUS INPUT SEBELUM PANGGIL onlyNumberTest : ",this.state.statusInput);
+        // console.log("TEST ISNUMERIC : ", status);
+        // console.log("INI STATUS STATUS INPUT SEBELUM PANGGIL onlyNumberTest : ",this.state.statusInput);
         this.setState({
             statusInput :  status
         });
-        console.log("INI STATUS STATUS INPUT SETELAH PANGGIL onlyNumberTest : ",this.state.statusInput);
+        // console.log("INI STATUS STATUS INPUT SETELAH PANGGIL onlyNumberTest : ",this.state.statusInput);
 
         var l = localStorage.getItem('statusInput');
-        console.log("Ini Value dari Local Storage : ", l);
+        // console.log("Ini Value dari Local Storage : ", l);
             if(status && !this.state.resultExist){
-                console.log("STATE INPUT TRUE");
+                // console.log("STATE INPUT TRUE");
                 document.getElementById("quantity_skin_thickness").style.borderColor = "";
                 if(afterTrim < 0||afterTrim == '-'+((afterTrim+"").substring(1,length_input)))
                 {
@@ -311,9 +311,9 @@ class FormTest extends React.Component{
                 }
             }
             else if(!status){
-                console.log("STATE INPUT FALSE");
+                // console.log("STATE INPUT FALSE");
                 var length_input = (val+"").length;
-                console.log(length_input);
+                // console.log(length_input);
                 if(length_input>0)
                 {
                     this.setState({
@@ -340,19 +340,19 @@ class FormTest extends React.Component{
         document.getElementById("quantity_cpeptida").style.borderColor = "";
 
         var val = document.getElementById("quantity_cpeptida").value;
-        console.log("Value dari Input : ", val);
+        // console.log("Value dari Input : ", val);
         var status = this.isNumeric(val) && status2;
-        console.log("TEST ISNUMERIC : ", status);
-        console.log("INI STATUS STATUS INPUT SEBELUM PANGGIL onlyNumberTest : ",this.state.statusInput);
+        // console.log("TEST ISNUMERIC : ", status);
+        // console.log("INI STATUS STATUS INPUT SEBELUM PANGGIL onlyNumberTest : ",this.state.statusInput);
         this.setState({
             statusInput :  status
         });
-        console.log("INI STATUS STATUS INPUT SETELAH PANGGIL onlyNumberTest : ",this.state.statusInput);
+        // console.log("INI STATUS STATUS INPUT SETELAH PANGGIL onlyNumberTest : ",this.state.statusInput);
 
         var l = localStorage.getItem('statusInput');
-        console.log("Ini Value dari Local Storage : ", l);
+        // console.log("Ini Value dari Local Storage : ", l);
             if(status && !this.state.resultExist){
-                console.log("STATE INPUT TRUE");
+                // console.log("STATE INPUT TRUE");
                 document.getElementById("quantity_cpeptida").style.borderColor = "";
                 if(afterTrim < 0 ||afterTrim == '-'+((afterTrim+"").substring(1,length_input)))
                 {
@@ -367,9 +367,9 @@ class FormTest extends React.Component{
                 } 
             }
             else if(!status){
-                console.log("STATE INPUT FALSE");
+                // console.log("STATE INPUT FALSE");
                 var length_input = (val+"").length;
-                console.log(length_input);
+                // console.log(length_input);
                 if(length_input>0)
                 {
                     this.setState({
@@ -396,19 +396,19 @@ class FormTest extends React.Component{
         document.getElementById("quantity_weight").style.borderColor = "";
 
         var val = document.getElementById("quantity_weight").value;
-        console.log("Value dari Input : ", val);
+        // console.log("Value dari Input : ", val);
         var status = this.isNumeric(val) && status2;
-        console.log("TEST ISNUMERIC : ", status);
-        console.log("INI STATUS STATUS INPUT SEBELUM PANGGIL onlyNumberTest : ",this.state.statusInput);
+        // console.log("TEST ISNUMERIC : ", status);
+        // console.log("INI STATUS STATUS INPUT SEBELUM PANGGIL onlyNumberTest : ",this.state.statusInput);
         this.setState({
             statusInput :  status
         });
-        console.log("INI STATUS STATUS INPUT SETELAH PANGGIL onlyNumberTest : ",this.state.statusInput);
+        // console.log("INI STATUS STATUS INPUT SETELAH PANGGIL onlyNumberTest : ",this.state.statusInput);
 
         var l = localStorage.getItem('statusInput');
-        console.log("Ini Value dari Local Storage : ", l);
+        // console.log("Ini Value dari Local Storage : ", l);
             if(status && !this.state.resultExist){
-                console.log("STATE INPUT TRUE");
+                // console.log("STATE INPUT TRUE");
                 document.getElementById("quantity_weight").style.borderColor = "";
                 if(afterTrim < 0 ||afterTrim == '-'+((afterTrim+"").substring(1,length_input)))
                 {
@@ -424,9 +424,9 @@ class FormTest extends React.Component{
                   
             }
             else if(!status){
-                console.log("STATE INPUT FALSE");
+                // console.log("STATE INPUT FALSE");
                 var length_input = (val+"").length;
-                console.log(length_input);
+                // console.log(length_input);
                 if(length_input>0)
                 {
                     this.setState({
@@ -453,19 +453,19 @@ class FormTest extends React.Component{
         document.getElementById("quantity_height").style.borderColor = "";
 
         var val = document.getElementById("quantity_height").value;
-        console.log("Value dari Input : ", val);
+        // console.log("Value dari Input : ", val);
         var status = this.isNumeric(val) && status2;
-        console.log("TEST ISNUMERIC : ", status);
-        console.log("INI STATUS STATUS INPUT SEBELUM PANGGIL onlyNumberTest : ",this.state.statusInput);
+        // console.log("TEST ISNUMERIC : ", status);
+        // console.log("INI STATUS STATUS INPUT SEBELUM PANGGIL onlyNumberTest : ",this.state.statusInput);
         this.setState({
             statusInput :  status
         });
-        console.log("INI STATUS STATUS INPUT SETELAH PANGGIL onlyNumberTest : ",this.state.statusInput);
+        // console.log("INI STATUS STATUS INPUT SETELAH PANGGIL onlyNumberTest : ",this.state.statusInput);
 
         var l = localStorage.getItem('statusInput');
-        console.log("Ini Value dari Local Storage : ", l);
+        // console.log("Ini Value dari Local Storage : ", l);
             if(status && !this.state.resultExist){
-                console.log("STATE INPUT TRUE");
+                // console.log("STATE INPUT TRUE");
                 document.getElementById("quantity_height").style.borderColor = "";
                 if(afterTrim < 0 ||afterTrim == '-'+((afterTrim+"").substring(1,length_input)))
                 {
@@ -480,9 +480,9 @@ class FormTest extends React.Component{
                 } 
             }
             else if(!status){
-                console.log("STATE INPUT FALSE");
+                // console.log("STATE INPUT FALSE");
                 var length_input = (val+"").length;
-                console.log(length_input);
+                // console.log(length_input);
                 if(length_input>0)
                 {
                     this.setState({
@@ -507,21 +507,21 @@ class FormTest extends React.Component{
         document.getElementById("quantity_family_diabetes").style.borderColor = "";
 
         var status = this.isNumeric(afterTrim);
-        console.log("TEST ISNUMERIC : ", status);
+        // console.log("TEST ISNUMERIC : ", status);
 
         var length_input = (afterTrim+"").length;
-        console.log(length_input);
-        console.log("INI STATUS STATUS INPUT SEBELUM PANGGIL onlyNumberTest : ",this.state.statusInput);
+        // console.log(length_input);
+        // console.log("INI STATUS STATUS INPUT SEBELUM PANGGIL onlyNumberTest : ",this.state.statusInput);
         this.setState({
             statusInput :  status
         });
-        console.log("INI STATUS STATUS INPUT SETELAH PANGGIL onlyNumberTest : ",this.state.statusInput);
+        // console.log("INI STATUS STATUS INPUT SETELAH PANGGIL onlyNumberTest : ",this.state.statusInput);
 
         var l = localStorage.getItem('statusInput');
-        console.log("Ini Value dari Local Storage : ", l);
+        // console.log("Ini Value dari Local Storage : ", l);
             if(status && !this.state.resultExist){
-                console.log("STATE INPUT TRUE");
-                console.log((afterTrim+"").charAt(length_input-1) == '.');
+                // console.log("STATE INPUT TRUE");
+                // console.log((afterTrim+"").charAt(length_input-1) == '.');
                 var posisi_koma_akhir = (afterTrim+"").charAt(length_input-1);
                 var posisi_koma = afterTrim.indexOf('.');
                 if(posisi_koma_akhir === '.' || posisi_koma>=0 || afterTrim < 0 || afterTrim == '-'+((afterTrim+"").substring(1,length_input)))
@@ -539,7 +539,7 @@ class FormTest extends React.Component{
                 }
             }
             else if(!status){
-                console.log("STATE INPUT FALSE");
+                // console.log("STATE INPUT FALSE");
                 if(length_input>0)
                 {
                     this.setState({
@@ -564,21 +564,21 @@ class FormTest extends React.Component{
         document.getElementById("quantity_family").style.borderColor = "";
         
         var status = this.isNumeric(afterTrim);
-        console.log("TEST ISNUMERIC : ", status);
+        // console.log("TEST ISNUMERIC : ", status);
 
         var length_input = (afterTrim+"").length;
-        console.log(length_input);
-        console.log("INI STATUS STATUS INPUT SEBELUM PANGGIL onlyNumberTest : ",this.state.statusInput);
+        // console.log(length_input);
+        // console.log("INI STATUS STATUS INPUT SEBELUM PANGGIL onlyNumberTest : ",this.state.statusInput);
         this.setState({
             statusInput :  status
         });
-        console.log("INI STATUS STATUS INPUT SETELAH PANGGIL onlyNumberTest : ",this.state.statusInput);
+        // console.log("INI STATUS STATUS INPUT SETELAH PANGGIL onlyNumberTest : ",this.state.statusInput);
 
         var l = localStorage.getItem('statusInput');
-        console.log("Ini Value dari Local Storage : ", l);
+        // console.log("Ini Value dari Local Storage : ", l);
             if(status && !this.state.resultExist){
-                console.log("STATE INPUT TRUE");
-                console.log((afterTrim+"").charAt(length_input-1) == '.');
+                // console.log("STATE INPUT TRUE");
+                // console.log((afterTrim+"").charAt(length_input-1) == '.');
                 var posisi_koma_akhir = (afterTrim+"").charAt(length_input-1);
                 var posisi_koma = afterTrim.indexOf('.');
                 if(posisi_koma_akhir === '.' || posisi_koma>=0 || afterTrim < 0 || afterTrim == '-'+((afterTrim+"").substring(1,length_input)))
@@ -596,7 +596,7 @@ class FormTest extends React.Component{
                 }
             }
             else if(!status){
-                console.log("STATE INPUT FALSE");
+                // console.log("STATE INPUT FALSE");
                 if(length_input>0)
                 {
                     this.setState({
@@ -616,7 +616,7 @@ class FormTest extends React.Component{
         Mengirim hasil ke ResultComponent (Diletakkan disini agar render dulu baru setState sehingga ga terjadi infinite loop)
     **/
     async callapi(){    //Knp async??
-        console.log("Component FormTest callapi");
+        // console.log("Component FormTest callapi");
         var data= 
             { 
                 "lahir": this.state.tahun,
@@ -633,7 +633,7 @@ class FormTest extends React.Component{
                 "userBD" : this.state.lahir
             };
         const url = "/api/prediksi_diabetes";
-        //console.log(data);
+        console.log(data);
         
         const requestOptions = {
             method: 'POST',
@@ -692,14 +692,14 @@ class FormTest extends React.Component{
         this.props.doTest.changeResultTestObesitas(resOb);
         this.props.doTest.changeResultTestTekananDarah(resTD);
 
-        console.log("Component FormTest callBackDataUser");
+        // console.log("Component FormTest callBackDataUser");
     }
 
     /*
         Method untuk set local storage untuk data input user
     **/
    setLocalStorageForDataUser = (nextProps, nextState) =>{  
-        console.log("Component FormTest setLocalStorageForDataUser");
+        // console.log("Component FormTest setLocalStorageForDataUser");
         localStorage.setItem('dulahir', JSON.stringify(nextState.lahir));
         localStorage.setItem('duhamil', JSON.stringify(nextState.hamil));
         localStorage.setItem('duglukosa', JSON.stringify(nextState.glukosa));
@@ -720,7 +720,7 @@ class FormTest extends React.Component{
    }
 
     alertReInputDataUser = () => {
-        console.log("Component FormTest alertReInputDataUser");
+        // console.log("Component FormTest alertReInputDataUser");
         var r = window.confirm("Ingin Mengulangi Tes?");
         if (r == true) {
             document.getElementById("hasil").style.display = "none";
@@ -738,8 +738,8 @@ class FormTest extends React.Component{
     }
 
     callAlert = () =>{
-        //console.log("Result Exist di Form Test : ", this.state.resultExist);
-        console.log("Component FormTest callAlert");
+        console.log("Result Exist di Form Test : ", this.state.resultExist);
+        // console.log("Component FormTest callAlert");
         if(this.state.resultExist)
         {
             this.alertReInputDataUser();
@@ -747,30 +747,30 @@ class FormTest extends React.Component{
     }
 
     componentWillMount = () =>{
-        console.log(this.state.statusInput);
+        // console.log(this.state.statusInput);
         if(this.state.statusInput == true)
         {
             this.callBackDataUser()
         }
-        console.log("Component FormTest componentWillMount");
+        // console.log("Component FormTest componentWillMount");
     }
 
     componentDidMount = () => {
         
-        console.log("Component FormTest componentDidMount");
+        // console.log("Component FormTest componentDidMount");
         //Ini Untuk Bisa tetap munculin hasil kalau statusnya resultExist
         if(this.state.resultExist == true)
         {
             document.getElementById("hasil").style.display = "block";
             document.getElementById("prediksi").style.display = "none";
-            console.log("State resultExist");
+            // console.log("State resultExist");
         }
 
     }
 
     componentWillUpdate = (nextProps, nextState) => {
         this.setLocalStorageForDataUser(nextProps,nextState);
-        console.log("Component FormTest componentWillUpdate");
+        // console.log("Component FormTest componentWillUpdate");
     }
 
     /**
@@ -778,7 +778,7 @@ class FormTest extends React.Component{
      */
     handleSubmit = event =>{
         event.preventDefault(); //ini harus ada, agar kalau ada error marknya ga ilang (seolah2 ga disubmit klo error)
-        console.log("Component FormTest handleSubmit");
+        // console.log("Component FormTest handleSubmit");
     }
 
     isNumeric = (n) => {
@@ -790,7 +790,7 @@ class FormTest extends React.Component{
     }
 
     go_predict_klik = ()=> {
-        console.log("Component FormTest onClick go_predict_klik");
+        // console.log("Component FormTest onClick go_predict_klik");
         var x = document.getElementById("hasil");
         var y = document.getElementById("prediksi");
         var status = this.getAgeFromLahir();
@@ -815,7 +815,7 @@ class FormTest extends React.Component{
     }
 
     go_predict_hover = ()=> {
-        console.log("Component FormTest onMouseHover go_predict_hover");
+        // console.log("Component FormTest onMouseHover go_predict_hover");
         var y = document.getElementById("prediksi");
         var status = this.getAgeFromLahir();
 
@@ -903,15 +903,15 @@ class FormTest extends React.Component{
 
         var curr_year = new Date().getFullYear();
         var age =  curr_year - year;
-        console.log("tahun lahir : ", year);
+        // console.log("tahun lahir : ", year);
         this.setState({tahun : age});
-        console.log("Age : ", age);
+        // console.log("Age : ", age);
         var status = (age>20)? true : false;
         return status;
     }
 
     render(){
-        console.log("Component FormTest Render");
+        // console.log("Component FormTest Render");
         return(
             <form onSubmit={this.handleSubmit}>
                     <div className="content">

@@ -5,12 +5,10 @@ import d from '../../Photo/d.jpg';
 
 class Diabetes extends React.Component{
     componentDidMount(){
-        console.log("Component Diabetes componentDidMount");
         window.scrollTo(0, 0);
     }
     
     render(){
-        console.log("Component Diabetes render");
         return (
             <div className="main_page">
                 <img className="wallpaper" src={diabetes} alt=""/>

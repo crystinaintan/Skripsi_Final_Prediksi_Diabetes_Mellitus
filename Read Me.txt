@@ -1,0 +1,3 @@
+1. Pastikan device sudah menginstall node.js
+2. Pastikan device sudah menginstall React.js
+3. Jalankan Batch File

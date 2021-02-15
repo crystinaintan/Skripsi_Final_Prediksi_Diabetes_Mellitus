@@ -22,11 +22,9 @@ function diabetesPedigreeFunction(n_keluargaDm, n_keluarga){
     else{
         return hasil;
     }
-    //return (n_keluargaDm/n_keluarga);
 }
 
 function calculate_bmi(berat, tinggi){
-    console.log(berat/Math.pow((tinggi/100), 2));
     return berat/Math.pow((tinggi/100), 2);
 }
     
@@ -48,7 +46,6 @@ function status_BMI(bmi){
     {
         status = "Obesitas";
     }
-    console.log(status);
     return status;
 }
     
@@ -81,7 +78,6 @@ function status_hipertensi(sistol, diastol){
     else{
         status = "Tekanan darah anda di luar kasus normal"
     }
-    console.log(status);
     return status;
 } 
 
@@ -98,12 +94,10 @@ function status_diabetes(status){
 
 function convertC_peptide(value){
     return parseFloat(((value*0.333*1000)/6.9450).toFixed(3));
-    //return ((value*7.1429)/6).toFixed(2);
 }
 
 function calculateSkinThickness(value){
     return parseFloat(value/2.0);
-    //return ((value*7.1429)/6).toFixed(2);
 }
 
 
@@ -119,16 +113,10 @@ router.post("/prediksi_diabetes", function(req, res, next){
         var features_a = ["Pregnancies", "Glucose","BloodPressure","SkinThickness","Insulin","BMI","DiabetesPedigreeFunction","Age"]; //atribut feature
         var dt_a = new DecisionTree(jsonObj, class_name_a, features_a);  //generate model tree
         const body = req.body;
-        console.log("Data Kiriman dari frontend : ", body.hamil);
         const imt = parseFloat(calculate_bmi(body.berat, body.tinggi).toFixed(2));
         const diabetesPedigree = diabetesPedigreeFunction(body.keluargaD, body.keluarga);
         const c_peptide = convertC_peptide(body.insulin);
         const skin_thickness = calculateSkinThickness(body.kulit);
-        
-        console.log("Ini C-Peptide Hasil Convert: ",c_peptide);
-        console.log("Ini Skin Thickness: ",skin_thickness);
-        console.log("Ini persetage diabetes Hasil Convert: ",diabetesPedigree);
-        console.log("Ini umur : ",body.lahir);
 
         var predicted_class_a = dt_a.predict({                          //memprediksi berdasarkan data baru, predicted_class_a (hasil prediksi data baru)
             Pregnancies: body.hamil,
@@ -162,7 +150,6 @@ router.post("/prediksi_diabetes", function(req, res, next){
             "obesitas" : status_BMI(imt),
             "tekananDarah" : status_hipertensi(body.sistol, body.diastol)
         };
-        console.log("Ini DIABETES Hasil Convert: ",predicted_class_a);
         res.send(JSON.stringify(hasil)); 
         
     });

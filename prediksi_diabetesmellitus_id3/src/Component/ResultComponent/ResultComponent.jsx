@@ -13,17 +13,10 @@ class Result extends React.Component{
             hasilImt:'Loading...',
             hasilObesitas:'Loading...',
             hasilTekananDarah:'Loading...'
-            //,
-
-            //penampung_hasilDiabetes :''
         }
-        console.log("Component Result constructor");
     }
 
     render(){
-        console.log("Component Result Render");
-        //console.log("Isi hasil imt : ", this.state.hasilImt);
-        //console.log("Ini value atribut given from middle : ", this.props.data.hasilCekFormDiabetes);
         return(
             <div className="result" id="hasil">
                     <h2>Hasil Deteksi</h2>

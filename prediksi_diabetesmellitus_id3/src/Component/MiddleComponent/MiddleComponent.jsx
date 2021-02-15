@@ -15,7 +15,6 @@ class Middle extends React.Component{
             hasilCekFormObesitas:'Loading...',
             hasilCekFormTekananDarah:'Loading...'
         }
-        console.log("Component Middle constructor");
     }
 
     changeResultTestDiabetes(diabetes)
@@ -39,7 +38,6 @@ class Middle extends React.Component{
     }
 
     render(){
-        console.log("Component Middle Render");
         return(
             <div className="main_page">
                 <img className="wallpaper" src={diabetes} alt=""/>

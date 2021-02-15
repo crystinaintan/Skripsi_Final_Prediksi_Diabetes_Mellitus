@@ -11,7 +11,6 @@ import BmiObesitas from '../Component/BmiObesitasPage/BmiObesitas';
 
 class Main extends Component{
     render(){
-        console.log("Component Main Render PAGE");
         return(
             <Router>
                 <Fragment>

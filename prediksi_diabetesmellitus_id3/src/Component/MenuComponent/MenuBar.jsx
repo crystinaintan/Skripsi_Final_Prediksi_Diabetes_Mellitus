@@ -13,32 +13,23 @@ class MenuBar extends React.Component {
 
         this.state = {
             selectedIndex: 0
-            //,
-            //hoverItem: ''
         }
-        console.log("Component MenuBar constructor");
     }
 
     setLocalStorageForMenuBar = (nextProps,nextState) =>{
         localStorage.setItem('menubaritem', JSON.stringify(nextState.selectedIndex));
-        console.log("Component Menubar setLocalStorageForMenuBar");
     }
 
     componentWillUpdate = (nextProps, nextState) => {
         this.setLocalStorageForMenuBar(nextProps,nextState);
-        console.log(this.state.selectedIndex);
-        console.log("Component Menubar WILL Update");
     }
 
     componentWillMount = () =>{
         this.setState({ selectedIndex: JSON.parse(localStorage.getItem('menubaritem'))});
-        console.log("Component Menubar WILL Mount");
     }
 
     render() {
-        console.log("Component MenuBar Render");
         return (
-            //console.log("Component Main Render PAGE"),
             <div className="menu">
                 <Drawer className="drawer">
                     <DrawerContent className= "drawercontent">
