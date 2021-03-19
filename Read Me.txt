@@ -1,3 +1,24 @@
+File ini berisi cara instalasi program dan cara menggunakan executable program setelah diinstall.  
+
+Untuk melakukan instalasi program ikuti langkah-langkah berikut.
 1. Pastikan device sudah menginstall node.js
 2. Pastikan device sudah menginstall React.js
-3. Jalankan Batch File
+3. Buka cmd pada project, kemudian pada cmd jalankan perintah:
+	-> cd api
+	-> npm install
+4. Tunggu proses install pada langkah 3 selesai,
+   kemudian masih pada cmd jalankan perintah:
+	-> cd ../prediksi_diabetesmellitus_id3
+	-> npm install
+5. Lihat di dalam file package.json pada folder sourcecode_program/api/package.json untuk melihat seluruh module Node.js yang digunakan pada project skripsi
+   yang seharusnya telah terinstall seluruhnya pada langkah 3.
+   Lihat di dalam file package.json pada folder sourcecode_program/prediksi_diabetesmellitus_id3/package.json untuk melihat seluruh module react.js yang digunakan pada project skripsi
+   yang seharusnya telah terinstall seluruhnya pada langkah 4.
+
+Untuk menggunakan executable program setelah diinstall ikuti langkah berikut.
+6. Tunggu proses install pada langkah 4 selesai,
+   lalu tinggalkan cmd, kembali pada folder source code program project skripsi, masuk ke dalam folder sourcecode_program,
+   kemudian jalankan Batch File dengan cara klik 2 kali pada file "Start Program.bat" agar 
+   project skripsi dapat dijalankan secara otomatis.
+7. Tunggu hingga browser membuka secara otomatis website project skripsi "Perangkat Lunak Pendeteksi Diabetes Mellitus pada Wanita dengan Menggunakan Algoritma ID3" untuk dapat melakukan
+   deteksi Diabetes Mellitus.
